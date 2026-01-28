@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Booking - Easybooking.com</title>
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Easybooking.com</div>
+    <div class="nav-links">
+      <a href="hotels.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="list-your-property.html">List your property</a>
+      <a href="register.html" class="cta-button">Register</a>
+      <a href="signin.html" class="cta-button">Sign in</a>
+    </div>
+  </nav>
+
+  <!-- Services Section -->
+  <div class="services">
+    <a href="hotels.html">&#127976;<b>Hotels</b></a>
+    <a href="flights.html" class="active">&#128746;<b>Flights</b></a>
+    <a href="car-rentals.html">&#128662;<b>Car Rentals</b></a>
+  </div>
+
+<!-- Flight Search Section -->
+<section class="flight-search">
+  <h1>Search Flights</h1>
+  <div class="flight-tabs">
+    <button class="active" id="roundtrip-tab">
+      <i class="fas fa-exchange-alt"></i> Roundtrip
+    </button>
+    <button id="oneway-tab">
+      <i class="fas fa-arrow-right"></i> One-way
+    </button>
+    <button id="multicity-tab">
+      <i class="fas fa-map-marker-alt"></i> Multi-city
+    </button>
+  </div>
+
+  <!-- Economy Class Dropdown (Always Visible) -->
+  <div class="economy-dropdown">
+    <label for="class"><i class="fas fa-chair"></i> Class:</label>
+    <select id="class">
+      <option value="economy">Economy Class</option>
+      <option value="premium-economy">Premium Economy Class</option>
+      <option value="business">Business Class</option>
+      <option value="first">First Class</option>
+    </select>
+  </div>
+
+  <!-- Roundtrip Search Form -->
+  <div class="search-box" id="roundtrip-form">
+    <div class="search-input-group">
+      <i class="fas fa-plane-departure"></i>
+      <input type="text" id="leaving-from" placeholder="Leaving from">
+    </div>
+    <div class="search-input-group">
+      <i class="fas fa-plane-arrival"></i>
+      <input type="text" id="going-to" placeholder="Going to">
+    </div>
+    <div class="search-input-group">
+      <i class="fas fa-calendar-alt"></i>
+      <input type="date" id="departure-date">
+    </div>
+    <div class="search-input-group">
+      <i class="fas fa-calendar-alt"></i>
+      <input type="date" id="return-date">
+    </div>
+    <div class="search-input-group">
+      <i class="fas fa-users"></i>
+      <select id="passengers">
+        <option value="1">1 traveler</option>
+        <option value="2">2 travelers</option>
+        <option value="3">3 travelers</option>
+        <option value="4">4 travelers</option>
+      </select>
+    </div>
+    <button class="search-btn">
+      <i class="fas fa-search"></i> Search Flights
+    </button>
+  </div>
+
+  <!-- One-way Search Form -->
+  <div class="search-box" id="oneway-form" style="display: none;">
+    <div class="search-input-group">
+      <i class="fas fa-plane-departure"></i>
+      <input type="text" id="oneway-leaving-from" placeholder="Leaving from">
+    </div>
+    <div class="search-input-group">
+      <i class="fas fa-plane-arrival"></i>
+      <input type="text" id="oneway-going-to" placeholder="Going to">
+    </div>
+    <div class="search-input-group">
+      <i class="fas fa-calendar-alt"></i>
+      <input type="date" id="oneway-departure-date">
+    </div>
+    <div class="search-input-group">
+      <i class="fas fa-users"></i>
+      <select id="oneway-passengers">
+        <option value="1">1 traveler</option>
+        <option value="2">2 travelers</option>
+        <option value="3">3 travelers</option>
+        <option value="4">4 travelers</option>
+      </select>
+    </div>
+    <button class="search-btn">
+      <i class="fas fa-search"></i> Search Flights
+    </button>
+  </div>
+
+  <!-- Multi-city Search Form -->
+  <div class="search-box" id="multicity-form" style="display: none;">
+    <div class="flight-segment">
+      <div class="search-input-group">
+        <i class="fas fa-plane-departure"></i>
+        <input type="text" id="multicity-leaving-from-1" placeholder="Leaving from">
+      </div>
+      <div class="search-input-group">
+        <i class="fas fa-plane-arrival"></i>
+        <input type="text" id="multicity-going-to-1" placeholder="Going to">
+      </div>
+      <div class="search-input-group">
+        <i class="fas fa-calendar-alt"></i>
+        <input type="date" id="multicity-departure-date-1">
+      </div>
+    </div>
+    <div class="flight-segment">
+      <div class="search-input-group">
+        <i class="fas fa-plane-departure"></i>
+        <input type="text" id="multicity-leaving-from-2" placeholder="Leaving from">
+      </div>
+      <div class="search-input-group">
+        <i class="fas fa-plane-arrival"></i>
+        <input type="text" id="multicity-going-to-2" placeholder="Going to">
+      </div>
+      <div class="search-input-group">
+        <i class="fas fa-calendar-alt"></i>
+        <input type="date" id="multicity-departure-date-2">
+      </div>
+    </div>
+    <div class="search-input-group">
+      <i class="fas fa-users"></i>
+      <select id="multicity-passengers">
+        <option value="1">1 traveler</option>
+        <option value="2">2 travelers</option>
+        <option value="3">3 travelers</option>
+        <option value="4">4 travelers</option>
+      </select>
+    </div>
+    <button class="search-btn">
+      <i class="fas fa-search"></i> Search Flights
+    </button>
+  </div>
+
+  <!-- Additional Options -->
+  <div class="additional-options">
+    <label><input type="checkbox"> <i class="fas fa-hotel"></i> Add a place to stay</label>
+  </div>
+</section>
+ <!-- Offers Section -->
+ <section class="offers">
+  <h2>Promotions, deals, and special offers for you</h2>
+  <div class="offer-card">
+    <img src="images/offer1.jpg" alt="Offer 1">
+    <div class="offer-content">
+      <h3>Save on flights worldwide</h3>
+      <p>Start your year with a sense of adventure, saving 15% or more with Early 2024 Deals.</p>
+      <button class="offer-btn">Save 15% or more</button>
+    </div>
+  </div>
+</section>
+  <!-- Trending Destinations Section -->
+  <section class="trending">
+    <h2>Trending destinations</h2>
+    <p>Most popular choices for travellers</p>
+    <div class="destination-grid">
+      <div class="destination-card">
+        <img src="images/destination1.jpg" alt="Kuala Lumpur">
+        <h3>Kuala Lumpur</h3>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination2.jpg" alt="Dhaka">
+        <h3>Dhaka</h3>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination3.jpg" alt="Bangkok">
+        <h3>Bangkok</h3>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination4.jpg" alt="Singapore">
+        <h3>Singapore</h3>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination5.jpg" alt="Cox's Bazar">
+        <h3>Cox's Bazar</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Easybooking.com. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

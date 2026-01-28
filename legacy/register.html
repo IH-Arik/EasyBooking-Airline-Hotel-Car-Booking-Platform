@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Easybooking.com</title>
+  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Easybooking.com</div>
+    <div class="nav-links">
+      <a href="hotels.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="list-your-property.html">List your property</a>
+      <a href="register.html" class="cta-button">Register</a>
+      <a href="signin.html" class="cta-button">Sign in</a>
+    </div>
+  </nav>
+
+  <!-- Services Section -->
+  <div class="services">
+    <a href="hotels.html">&#127976;<b>Hotels</b></a>
+    <a href="flights.html">&#128746;<b>Flights</b></a>
+    <a href="car-rentals.html">&#128662;<b>Car Rentals</b></a>
+  </div>
+
+  <!-- Registration Section -->
+  <section class="register">
+    <div class="register-container">
+      <h1>Create an Account</h1>
+      <p>Join Easybooking.com for the best travel deals and personalized recommendations</p>
+      
+      <form action="register_process.php" method="post">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="fullname" placeholder="Full Name" required>
+        </div>
+        
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" placeholder="Password" required>
+        </div>
+        
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        </div>
+        
+        <button type="submit" class="register-btn">Register</button>
+      </form>
+      
+      <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Easybooking.com. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

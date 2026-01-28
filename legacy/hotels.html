@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels - Easybooking.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Easybooking.com</div>
+    <div class="nav-links">
+      <a href="hotels.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="list-your-property.html">List your property</a>
+      <a href="register.html" class="cta-button">Register</a>
+      <a href="signin.html" class="cta-button">Sign in</a>
+    </div>
+  </nav>
+
+  <!-- Services Section -->
+  <div class="services">
+    <a href="hotels.html" class="active">&#127976;<b>Hotels</b></a>
+    <a href="flights.html">&#128746;<b>Flights</b></a>
+    <a href="car-rentals.html">&#128662;<b>Car Rentals</b></a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find your next stay</h1>
+      <p>Search low prices on hotels, homes, and much more...</p>
+      <div class="search-box">
+        <div class="search-input-group">
+          <i class="fas fa-map-marker-alt"></i>
+          <input type="text" id="destination" class="search-input" placeholder="Where are you going?">
+        </div>
+        <div class="search-input-group">
+          <i class="fas fa-calendar-alt"></i>
+          <input type="date" id="check-in" class="search-input">
+        </div>
+        <div class="search-input-group">
+          <i class="fas fa-calendar-alt"></i>
+          <input type="date" id="check-out" class="search-input">
+        </div>
+        <div class="search-input-group">
+          <i class="fas fa-user"></i>
+          <input type="number" class="search-input" placeholder="Adults" min="1" value="2">
+        </div>
+        <div class="search-input-group">
+          <i class="fas fa-child"></i>
+          <input type="number" class="search-input" placeholder="Children" min="0" value="0">
+        </div>
+        <div class="search-input-group">
+          <i class="fas fa-building"></i>
+          <input type="number" class="search-input" placeholder="Rooms" min="1" value="1">
+        </div>
+        <button class="search-btn">
+          <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offers Section -->
+  <section class="offers">
+    <h2>Promotions, deals, and special offers for you</h2>
+    <div class="offer-card">
+      <img src="images/offer1.jpg" alt="Offer 1">
+      <div class="offer-content">
+        <h3>Save 15% with Late Escape Deals</h3>
+        <p>Explore thousands of destinations worldwide and save 15% or more</p>
+        <button class="offer-btn">Explore deals</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Destinations Section -->
+  <section class="trending">
+    <h2>Trending destinations</h2>
+    <p>Most popular choices for travellers</p>
+    <div class="destination-grid">
+      <div class="destination-card">
+        <img src="images/destination1.jpg" alt="Kuala Lumpur">
+        <h3>Kuala Lumpur</h3>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination2.jpg" alt="Dhaka">
+        <h3>Dhaka</h3>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination3.jpg" alt="Bangkok">
+        <h3>Bangkok</h3>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination4.jpg" alt="Singapore">
+        <h3>Singapore</h3>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination5.jpg" alt="Cox's Bazar">
+        <h3>Cox's Bazar</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Easybooking.com. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

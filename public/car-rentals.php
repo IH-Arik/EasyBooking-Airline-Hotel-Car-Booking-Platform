@@ -1,0 +1,104 @@
+<?php
+$pageTitle = "Car Rentals";
+require_once 'includes/db_connect.php';
+require_once 'includes/session.php';
+?>
+<?php include 'includes/header.php'; ?>
+
+  <div class="services">
+    <a href="index.php">&#127976;<b>Hotels</b></a>
+    <a href="flights.php">&#128746;<b>Flights</b></a>
+    <a href="car-rentals.php" class="active">&#128662;<b>Car Rentals</b></a>
+  </div>
+
+  <!-- Car Rental Search Section -->
+  <section class="car-rental-search">
+    <h1>Car Hire for Any Kind of Trip</h1>
+    <p>Great cars at great prices, from the biggest car rental companies</p>
+    <div class="search-box">
+      <div class="search-input-group">
+        <label for="pickup-location">Pick-up location</label>
+        <input type="text" id="pickup-location" placeholder="Enter city">
+      </div>
+      <div class="search-input-group">
+        <label for="dropoff-location">Drop-off location</label>
+        <input type="text" id="dropoff-location" placeholder="Enter city">
+      </div>
+      <div class="search-input-group">
+        <label for="pickup-date">Pick-up date</label>
+        <input type="date" id="pickup-date">
+      </div>
+      <div class="search-input-group">
+        <label for="pickup-time">Pick-up time</label>
+        <input type="time" id="pickup-time">
+      </div>
+      <div class="search-input-group">
+        <label for="dropoff-date">Drop-off date</label>
+        <input type="date" id="dropoff-date">
+      </div>
+      <div class="search-input-group">
+        <label for="dropoff-time">Drop-off time</label>
+        <input type="time" id="dropoff-time">
+      </div>
+      <div class="search-input-group">
+        <label for="driver-age">Driver age</label>
+        <select id="driver-age">
+          <option value="20-25">20-25</option>
+          <option value="26-30">26-30</option>
+          <option value="31-65">31-65</option>
+          <option value="65+">65+</option>
+        </select>
+      </div>
+      
+      <button class="search-btn">Search</button>
+    </div>
+  </section>
+  
+  <!-- Offers Section -->
+  <section class="offers">
+    <h2>Promotions, deals, and special offers for you</h2>
+    <div class="offer-card">
+      <img src="images/offer1.jpg" alt="Offer 1">
+      <div class="offer-content">
+        <h3>Save on car rentals worldwide</h3>
+        <p>Start your year with a sense of adventure, saving 15% or more with Early 2024 Deals.</p>
+        <button class="offer-btn">Save 15% or more</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Promotional Section -->
+  <section class="promo-section">
+    <h2>Travel More, Spend Less</h2>
+    <p>Sign in, save money</p>
+    <div class="genius-promo">
+      <p>Save 10% on select rental cars - just look for the blue <span class="genius-label">Genius</span> label</p>
+      <?php if (isLoggedIn()): ?>
+        <p>You're already signed in and eligible for Genius discounts!</p>
+      <?php else: ?>
+        <a href="signin.php" class="genius-btn">Sign in</a>
+        <a href="register.php" class="genius-btn">Register</a>
+      <?php endif; ?>
+    </div>
+  </section>
+
+  <!-- Customer Support Section -->
+  <section class="customer-support">
+    <h2>We're Here for You</h2>
+    <div class="support-features">
+      <div class="feature">
+        <h3>Free Cancellation</h3>
+        <p>Up to 48 hours before pick-up, on most bookings</p>
+      </div>
+      <div class="feature">
+        <h3>5 Million+ Reviews</h3>
+        <p>By real, verified customers</p>
+      </div>
+      <div class="feature">
+        <h3>Customer Support</h3>
+        <p>Available in over 30 languages</p>
+      </div>
+    </div>
+  </section>
+
+<?php include 'includes/footer.php'; ?>
